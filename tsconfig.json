@@ -1,0 +1,75 @@
+{
+  // TypeScript Configuration for Playwright Project
+  // This file tells TypeScript how to compile your .ts files
+  
+  "compilerOptions": {
+    // Target: Which JavaScript version to compile to
+    // ES2022 is modern and supports async/await, which Playwright uses heavily
+    "target": "ES2022",
+    
+    // Module: How to handle imports/exports
+    // CommonJS is the Node.js standard (uses require/module.exports)
+    "module": "commonjs",
+    
+    // Lib: Which built-in type definitions to include
+    // ES2022 gives us modern JavaScript features
+    "lib": ["ES2022"],
+    
+    // ModuleResolution: How TypeScript finds imported modules
+    // "node" means it looks in node_modules folder (standard for Node.js projects)
+    "moduleResolution": "node",
+    
+    // SourceMap: Generate .map files for debugging
+    // Helps you debug TypeScript code in the browser/debugger
+    "sourceMap": true,
+    
+    // OutDir: Where compiled JavaScript files go
+    // We don't actually compile for Playwright (it handles .ts directly), but good to have
+    "outDir": "./dist",
+    
+    // RootDir: Where your TypeScript source files are
+    "rootDir": ".",
+    
+    // Strict: Enable all strict type-checking options
+    // This catches more errors and enforces better code quality
+    "strict": true,
+    
+    // EsModuleInterop: Better compatibility with CommonJS modules
+    // Allows "import x from 'module'" instead of "import * as x from 'module'"
+    "esModuleInterop": true,
+    
+    // SkipLibCheck: Skip type checking of declaration files (.d.ts)
+    // Speeds up compilation, we trust library types are correct
+    "skipLibCheck": true,
+    
+    // ForceConsistentCasingInFileNames: Enforce consistent file name casing
+    // Prevents issues when moving code between case-sensitive/insensitive file systems
+    "forceConsistentCasingInFileNames": true,
+    
+    // ResolveJsonModule: Allow importing .json files
+    // Useful for test data files
+    "resolveJsonModule": true,
+    
+    // Types: Which type definition packages to include
+    // @types/node gives us Node.js types (fs, path, etc.)
+    "types": ["node"]
+  },
+  
+  // Include: Which files to compile
+  // ** means "any subdirectory", * means "any file"
+  "include": [
+    "tests/**/*",      // All test files
+    "pages/**/*",      // All page object files
+    "fixtures/**/*",   // All fixture files
+    "utils/**/*",      // All utility files
+    "playwright.config.ts"  // The Playwright config file
+  ],
+  
+  // Exclude: Which files to ignore
+  "exclude": [
+    "node_modules",    // Don't compile dependencies
+    "dist",            // Don't compile output directory
+    "test-results",    // Don't compile test results
+    "playwright-report" // Don't compile test reports
+  ]
+}
