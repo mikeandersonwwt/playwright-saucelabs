@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playwright SauceLabs Showcase</title>
+    <meta
+      name="description"
+      content="Portfolio showcase for a Playwright + TypeScript test automation framework built against SauceDemo."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>
+        <img
+          src="https://playwright.dev/img/playwright-logo.svg"
+          alt="Playwright logo"
+          width="34"
+          height="34"
+        />
+        Playwright Test Automation Showcase
+      </h1>
+      <p class="lead">
+        A concise snapshot of an end-to-end automation framework featuring
+        functional, API, visual, and accessibility testing across Chromium, Firefox,
+        and WebKit. The suite includes 90+ tests, runs across 3 browsers, uses 5
+        Page Objects, and executes 273 total runs.
+      </p>
+      <p class="repo-link">
+        <a class="repo-button" href="https://github.com/mikeandersonwwt/playwright-saucelabs" target="_blank" rel="noopener noreferrer">
+          View Repository
+        </a>
+      </p>
+    </header>
+
+    <main class="content">
+      <section>
+        <h2>What This Project Demonstrates</h2>
+        <div class="grid two-up">
+          <article class="card">
+            <h3>Framework Design</h3>
+            <ul>
+              <li>Page Object Model architecture for maintainable tests</li>
+              <li>Reusable fixtures and helper utilities</li>
+              <li>Data-driven workflows with JSON-backed test data</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Quality Coverage</h3>
+            <ul>
+              <li>Feature and end-to-end user journey coverage</li>
+              <li>API testing patterns (GET, POST, PUT, DELETE)</li>
+              <li>Visual and accessibility-focused validation</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Architecture Snapshot</h2>
+        <pre class="tree" aria-label="Project structure">playwright-saucelabs/
+├── pages/                  # POM classes (Login, Inventory, Cart, Checkout, Product)
+├── tests/                  # Functional, API, visual, and accessibility suites
+├── fixtures/               # Auth fixture with typed page objects
+├── utils/                  # Reusable test helper utilities
+├── test-data/              # User/product JSON datasets
+└── project-summary/        # Phase-based implementation documentation</pre>
+      </section>
+
+      <section>
+        <h2>Visual Evidence</h2>
+        <p class="section-note">
+          Curated baseline captures from the visual regression suite (Chromium).
+        </p>
+        <div class="grid gallery">
+          <figure>
+            <img src="./assets/images/login-page.png" alt="SauceDemo login page visual snapshot" loading="lazy" />
+            <figcaption>Login page baseline</figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/images/inventory-page.png" alt="Inventory page full-page visual snapshot" loading="lazy" />
+            <figcaption>Inventory full page</figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/images/product-card.png" alt="Product card component visual snapshot" loading="lazy" />
+            <figcaption>Component-level capture</figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/images/login-mobile.png" alt="Mobile viewport login visual snapshot" loading="lazy" />
+            <figcaption>Mobile viewport baseline</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h2>Test Run Clip</h2>
+        <p class="section-note">
+          Recorded clip captured during a full Chromium run of
+          <code>tests/login.spec.ts</code>
+        </p>
+        <video controls muted playsinline preload="metadata" class="clip">
+          <source src="./assets/media/test-run-clip.webm" type="video/webm" />
+          Your browser does not support embedded video playback.
+        </video>
+      </section>
+
+      <section>
+        <h2>Run Locally</h2>
+        <pre class="commands">git clone https://github.com/mikeandersonwwt/playwright-saucelabs.git
+cd playwright-saucelabs
+npm install
+npx playwright install
+npx playwright test
+npx playwright test --ui
+npx playwright show-report</pre>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Independent educational portfolio project. Not affiliated with, endorsed by,
+        or sponsored by Microsoft or the Playwright team.
+      </p>
+    </footer>
+  </body>
+</html>

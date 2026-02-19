@@ -41,6 +41,20 @@ npx playwright test --ui
 npx playwright show-report
 ```
 
+## Showcase Web Page
+
+This repository includes a lightweight project showcase page at [`site/index.html`](site/index.html), with curated visual snapshot examples and a short test-run clip.
+
+### View Locally
+
+```bash
+# Option 1: open directly in your browser
+open site/index.html
+
+# Option 2: run a simple static server
+python3 -m http.server 4173 --directory site
+```
+
 ## Test Implementation Reference Guide
 
 Use this as a quick lookup when building a new test. Start from the closest example and adapt it.
