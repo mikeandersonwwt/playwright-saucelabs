@@ -163,6 +163,10 @@ figcaption {
   transition: background-color 120ms ease, color 120ms ease;
 }
 
+.repo-button + .repo-button {
+  margin-left: 0.6rem;
+}
+
 .repo-button:hover {
   background: var(--brand-deep);
   color: #ffffff;
